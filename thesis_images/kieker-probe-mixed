@@ -1,0 +1,10 @@
+
+    final long tin = MONITORING_CONTROLLER.getTimeSource().getTime();
+    // call of the service
+    this.serviceA();
+    final long tout = MONITORING_CONTROLLER.getTimeSource().getTime();
+     // Create a new record and set values
+    final MyResponseTimeRecord e = new MyResponseTimeRecord(
+    "serviceA", tout, tin);
+    // Pass the record to the monitoring controller
+    MONITORING_CONTROLLER.newMonitoringRecord(e);

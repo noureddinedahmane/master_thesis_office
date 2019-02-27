@@ -1,0 +1,30 @@
+    
+    class ComponentA{
+        private componentB; 
+        
+        void service(boolean condition,
+                       List array){
+            // internal computation
+            innerMethod_1();
+            
+            if(condition){
+                componentB.service_1();
+            }
+            else{
+                for(item in array){
+                    componentB.service_2();
+                }
+            }
+           
+        }
+        
+        private innerMethod_1(){
+            // internal computation
+            // ...
+        }
+        
+    }
+    
+    
+    
+    
